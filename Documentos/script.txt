@@ -1,0 +1,68 @@
+
+CREATE DATABASE index_portal_cliente;
+
+
+CREATE TABLE empresas (
+           id int(11) NOT NULL, 
+           nome varchar(50) NOT NULL,
+           cpf_cnpj varchar(50) NULL,
+           login varchar(50) NOT NULL,
+           descricao varchar(255) NULL,
+           ativo tinyint(1) DEFAULT NULL,
+           data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+           endereco_site varchar(100) NULL,
+           telefone1 varchar(20) NULL,
+           telefone2 varchar(20) NULL,
+);
+ALTER TABLE empresas
+          ADD PRIMARY KEY (id);
+ALTER TABLE empresas
+          MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+
+CREATE TABLE usuarios (
+           id int(11) NOT NULL, 
+           nome varchar(20) NOT NULL,
+           sobrenome varchar(100) NULL,
+           login varchar(20) NOT NULL,
+           senha varchar(60) NOT NULL,
+           email varchar(50) NULL,
+           ativo tinyint(1) DEFAULT NULL,
+           data_nascimento DATETIME NULL,
+           data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+           telefone1 varchar(20) NULL,
+           telefone2 varchar(20) NULL,
+           celular1 varchar(20) NULL,
+           celular2 varchar(20) NULL,
+           endereco varchar(80) NULL,
+           numero varchar(20) NULL,
+           complemento varchar(40) NULL,
+           cep varchar(15) NULL,
+           cpf_cnpj varchar(50) NULL,           
+           rg varchar(20) NULL,
+           sexo varchar(1) NULL
+);
+
+
+ALTER TABLE usuarios
+          ADD PRIMARY KEY (id);
+
+
+ALTER TABLE usuarios
+          MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+
+
+CREATE TABLE perfis (
+           id int(11) NOT NULL, 
+           nome varchar(20) NOT NULL,
+           descricao varchar(100)  NULL
+);
+
+ALTER TABLE perfis
+          ADD PRIMARY KEY (id);
+
+ALTER TABLE perfis
+          MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+
