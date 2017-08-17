@@ -1,1 +1,6 @@
-# 1ndex_portal_cliente
+Desenvolvimento do portal do cliente 1ndex.
+
+
+*PHP
+*AngularJs
+*MySQL
